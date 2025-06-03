@@ -1,0 +1,10 @@
+1 out of 1 target(s) converted
+Created solution: /Users/chrsei01/02_Git/OpenNuvoton/M55M1BSP/SampleCode/NuMaker_M55M1/LwIP_httpd_netconn/KEIL/LwIP_httpd_netconn.csolution.yml
+With projects:
+- /Users/chrsei01/02_Git/OpenNuvoton/M55M1BSP/SampleCode/NuMaker_M55M1/LwIP_httpd_netconn/KEIL/LwIP_httpd_netconn.cproject.yml
+Error: 0 error(s), 1 warning(s):
+Warnings:
+	The target "LwIP_httpd_netconn" is configured with following user commands which should be run manually:
+            After Build/Rebuild
+                fromelf --bin ".\Objects\@L.axf" --output ".\Objects\@L.bin"
+                fromelf --text -c ".\Objects\@L.axf" --output ".\Objects\@L.txt"

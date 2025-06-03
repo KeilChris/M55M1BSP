@@ -1,0 +1,15 @@
+build-idx:
+  generated-by: csolution version 2.9.0
+  csolution: LwIP_httpd_netconn.csolution.yml
+  tmpdir: tmp
+  cprojects:
+    - cproject: LwIP_httpd_netconn.cproject.yml
+  cbuilds:
+    - cbuild: LwIP_httpd_netconn+LwIP_httpd_netconn.cbuild.yml
+      project: LwIP_httpd_netconn
+      configuration: +LwIP_httpd_netconn
+      messages:
+        info:
+          - LwIP_httpd_netconn.cbuild-pack.yml - file is already up-to-date
+          - LwIP_httpd_netconn+LwIP_httpd_netconn.cbuild-run.yml - file is already up-to-date
+          - LwIP_httpd_netconn+LwIP_httpd_netconn.cbuild.yml - file is already up-to-date

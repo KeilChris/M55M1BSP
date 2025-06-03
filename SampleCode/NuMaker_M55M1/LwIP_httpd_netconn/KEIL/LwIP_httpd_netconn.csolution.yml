@@ -1,0 +1,25 @@
+solution:
+  created-by: uv2csolution@1.6.0
+  created-for: CMSIS-Toolbox@2.7.0
+  compiler: AC6
+  target-types:
+    - type: LwIP_httpd_netconn
+      device: M55M1H2LJAE
+      optimize: debug
+      target-set:
+        - set:
+          debugger:
+            name: CMSIS-DAP
+          images:
+            - project-context: LwIP_httpd_netconn
+  misc:
+    - for-compiler: AC6
+      C-CPP:
+        - -gdwarf-5
+      ASM:
+        - -gdwarf-5
+      Link:
+        - --entry=Reset_Handler
+
+  projects:
+    - project: LwIP_httpd_netconn.cproject.yml

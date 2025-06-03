@@ -1,0 +1,257 @@
+build:
+  generated-by: csolution version 2.9.0
+  solution: LwIP_httpd_netconn.csolution.yml
+  project: LwIP_httpd_netconn.cproject.yml
+  context: LwIP_httpd_netconn+LwIP_httpd_netconn
+  compiler: AC6
+  device: Nuvoton::M55M1H2LJAE
+  device-pack: Nuvoton::NuMicro_DFP@1.3.25
+  processor:
+    dsp: on
+    endian: little
+    fpu: dp
+    mve: fp
+    trustzone: off
+    core: Cortex-M55
+  packs:
+    - pack: Nuvoton::NuMicro_DFP@1.3.25
+      path: ${CMSIS_PACK_ROOT}/Nuvoton/NuMicro_DFP/1.3.25
+  optimize: debug
+  debug: on
+  misc:
+    ASM:
+      - -gdwarf-5
+      - -masm=auto
+    C:
+      - -gdwarf-5
+      - -std=c11
+      - -fno-rtti
+      - -funsigned-char
+      - -fshort-enums
+      - -fshort-wchar
+      - -ffunction-sections
+      - -Wno-packed
+      - -Wno-missing-variable-declarations
+      - -Wno-missing-prototypes
+      - -Wno-missing-noreturn
+      - -Wno-sign-conversion
+      - -Wno-nonportable-include-path
+      - -Wno-reserved-id-macro
+      - -Wno-unused-macros
+      - -Wno-documentation-unknown-command
+      - -Wno-documentation
+      - -Wno-license-management
+      - -Wno-parentheses-equality
+    CPP:
+      - -gdwarf-5
+      - -xc++
+      - -std=c++11
+      - -fno-exceptions
+      - -fno-rtti
+      - -funsigned-char
+      - -fshort-enums
+      - -fshort-wchar
+      - -ffunction-sections
+      - -Wno-packed
+      - -Wno-missing-variable-declarations
+      - -Wno-missing-prototypes
+      - -Wno-missing-noreturn
+      - -Wno-sign-conversion
+      - -Wno-nonportable-include-path
+      - -Wno-reserved-id-macro
+      - -Wno-unused-macros
+      - -Wno-documentation-unknown-command
+      - -Wno-documentation
+      - -Wno-license-management
+      - -Wno-parentheses-equality
+    Link:
+      - --entry=Reset_Handler
+      - --library_type=microlib
+      - --map
+      - --load_addr_map_info
+      - --xref
+      - --callgraph
+      - --symbols
+      - --info sizes
+      - --info totals
+      - --info unused
+      - --info veneers
+      - --strict
+      - --summary_stderr
+      - --info summarysizes
+  define:
+    - SYSTEM_CORE_CLOCK: 220000000
+    - __MICROLIB
+  define-asm:
+    - __MICROLIB
+  add-path:
+    - ../../../../Library/CMSIS/Core/Include
+    - ../../../../Library/Device/Nuvoton/M55M1/Include
+    - ../../../../Library/StdDriver/inc
+    - ../../../../ThirdParty/FreeRTOS/Source/include
+    - ../../../../ThirdParty/FreeRTOS/Demo/Common/include
+    - ../../../../ThirdParty/FreeRTOS/Source/portable/GCC/ARM_CM55_NTZ/non_secure
+    - ../../lwIP/include
+    - ../../lwIP/drv_emac
+    - ../../../../ThirdParty/lwIP/src/include
+    - ..
+    - ../../../../Library/StdDriver/inc/emac
+    - ${CMSIS_PACK_ROOT}/Nuvoton/NuMicro_DFP/1.3.25/Device/M55M1/Include
+  add-path-asm:
+    - ${CMSIS_PACK_ROOT}/Nuvoton/NuMicro_DFP/1.3.25/Device/M55M1/Include
+  output-dirs:
+    intdir: tmp
+    outdir: out/LwIP_httpd_netconn/LwIP_httpd_netconn
+    rtedir: RTE
+  output:
+    - type: elf
+      file: LwIP_httpd_netconn.axf
+    - type: hex
+      file: LwIP_httpd_netconn.hex
+    - type: map
+      file: LwIP_httpd_netconn.axf.map
+  linker:
+    script: ../../../../Library/Device/Nuvoton/M55M1/Source/ARM/M55M1.scatter
+  groups:
+    - group: CMSIS
+      files:
+        - file: ../../../../Library/Device/Nuvoton/M55M1/Source/startup_M55M1.c
+          category: sourceC
+        - file: ../../../../Library/Device/Nuvoton/M55M1/Source/system_M55M1.c
+          category: sourceC
+    - group: User
+      files:
+        - file: ../main.c
+          category: sourceC
+        - file: ../fs.c
+          category: sourceC
+        - file: ../httpserver-netconn.c
+          category: sourceC
+    - group: drv_emac
+      files:
+        - file: ../../lwIP/drv_emac/emac.c
+          category: sourceC
+        - file: ../../lwIP/drv_emac/mii.c
+          category: sourceC
+    - group: FreeRTOS
+      files:
+        - file: ../../../../ThirdParty/FreeRTOS/Source/list.c
+          category: sourceC
+        - file: ../../../../ThirdParty/FreeRTOS/Source/tasks.c
+          category: sourceC
+        - file: ../../../../ThirdParty/FreeRTOS/Source/timers.c
+          category: sourceC
+        - file: ../../../../ThirdParty/FreeRTOS/Source/portable/MemMang/heap_2.c
+          category: sourceC
+        - file: ../../../../ThirdParty/FreeRTOS/Source/queue.c
+          category: sourceC
+        - file: ../../../../ThirdParty/FreeRTOS/Demo/Common/Minimal/GenQTest.c
+          category: sourceC
+        - file: ../../../../ThirdParty/FreeRTOS/Demo/Common/Minimal/PollQ.c
+          category: sourceC
+        - file: ../../../../ThirdParty/FreeRTOS/Demo/Common/Minimal/semtest.c
+          category: sourceC
+        - file: ../../../../ThirdParty/FreeRTOS/Demo/Common/Minimal/QueueSet.c
+          category: sourceC
+        - file: ../../../../ThirdParty/FreeRTOS/Source/portable/GCC/ARM_CM55_NTZ/non_secure/port.c
+          category: sourceC
+        - file: ../../../../ThirdParty/FreeRTOS/Source/portable/GCC/ARM_CM55_NTZ/non_secure/portasm.c
+          category: sourceC
+    - group: Library
+      files:
+        - file: ../../../../Library/StdDriver/src/retarget.c
+          category: sourceC
+        - file: ../../../../Library/StdDriver/src/clk.c
+          category: sourceC
+        - file: ../../../../Library/StdDriver/src/sys.c
+          category: sourceC
+        - file: ../../../../Library/StdDriver/src/uart.c
+          category: sourceC
+        - file: ../../../../Library/StdDriver/src/emac/synopGMAC_Dev.c
+          category: sourceC
+        - file: ../../../../Library/StdDriver/src/emac/synopGMAC_network_interface.c
+          category: sourceC
+        - file: ../../../../Library/StdDriver/src/emac/synopGMAC_plat.c
+          category: sourceC
+        - file: ../../../../Library/StdDriver/src/gpio.c
+          category: sourceC
+    - group: LwIP
+      files:
+        - file: ../../lwIP/sys_arch.c
+          category: sourceC
+        - file: ../../lwIP/time_stamp.c
+          category: sourceC
+        - file: ../../lwIP/netif/ethernetif.c
+          category: sourceC
+        - file: ../../../../ThirdParty/lwIP/src/core/def.c
+          category: sourceC
+        - file: ../../../../ThirdParty/lwIP/src/core/dns.c
+          category: sourceC
+        - file: ../../../../ThirdParty/lwIP/src/core/inet_chksum.c
+          category: sourceC
+        - file: ../../../../ThirdParty/lwIP/src/core/init.c
+          category: sourceC
+        - file: ../../../../ThirdParty/lwIP/src/core/ip.c
+          category: sourceC
+        - file: ../../../../ThirdParty/lwIP/src/core/mem.c
+          category: sourceC
+        - file: ../../../../ThirdParty/lwIP/src/core/memp.c
+          category: sourceC
+        - file: ../../../../ThirdParty/lwIP/src/core/netif.c
+          category: sourceC
+        - file: ../../../../ThirdParty/lwIP/src/core/pbuf.c
+          category: sourceC
+        - file: ../../../../ThirdParty/lwIP/src/core/raw.c
+          category: sourceC
+        - file: ../../../../ThirdParty/lwIP/src/core/stats.c
+          category: sourceC
+        - file: ../../../../ThirdParty/lwIP/src/core/sys_lwip.c
+          category: sourceC
+        - file: ../../../../ThirdParty/lwIP/src/core/tcp.c
+          category: sourceC
+        - file: ../../../../ThirdParty/lwIP/src/core/tcp_in.c
+          category: sourceC
+        - file: ../../../../ThirdParty/lwIP/src/core/tcp_out.c
+          category: sourceC
+        - file: ../../../../ThirdParty/lwIP/src/core/timeouts.c
+          category: sourceC
+        - file: ../../../../ThirdParty/lwIP/src/core/udp.c
+          category: sourceC
+        - file: ../../../../ThirdParty/lwIP/src/core/ipv4/autoip.c
+          category: sourceC
+        - file: ../../../../ThirdParty/lwIP/src/core/ipv4/dhcp.c
+          category: sourceC
+        - file: ../../../../ThirdParty/lwIP/src/core/ipv4/etharp.c
+          category: sourceC
+        - file: ../../../../ThirdParty/lwIP/src/core/ipv4/icmp.c
+          category: sourceC
+        - file: ../../../../ThirdParty/lwIP/src/core/ipv4/igmp.c
+          category: sourceC
+        - file: ../../../../ThirdParty/lwIP/src/core/ipv4/ip4.c
+          category: sourceC
+        - file: ../../../../ThirdParty/lwIP/src/core/ipv4/ip4_addr.c
+          category: sourceC
+        - file: ../../../../ThirdParty/lwIP/src/core/ipv4/ip4_frag.c
+          category: sourceC
+        - file: ../../../../ThirdParty/lwIP/src/api/api_lib.c
+          category: sourceC
+        - file: ../../../../ThirdParty/lwIP/src/api/api_msg.c
+          category: sourceC
+        - file: ../../../../ThirdParty/lwIP/src/api/err.c
+          category: sourceC
+        - file: ../../../../ThirdParty/lwIP/src/api/netbuf.c
+          category: sourceC
+        - file: ../../../../ThirdParty/lwIP/src/api/netdb.c
+          category: sourceC
+        - file: ../../../../ThirdParty/lwIP/src/api/netifapi.c
+          category: sourceC
+        - file: ../../../../ThirdParty/lwIP/src/api/sockets.c
+          category: sourceC
+        - file: ../../../../ThirdParty/lwIP/src/api/tcpip.c
+          category: sourceC
+        - file: ../../../../ThirdParty/lwIP/src/netif/ethernet.c
+          category: sourceC
+  licenses:
+    - license: <unknown>
+      packs:
+        - pack: Nuvoton::NuMicro_DFP@1.3.25

@@ -1,0 +1,52 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/chrsei01/02_Git/KeilChris/M55M1BSP/SampleCode/NuMaker_M55M1/LwIP_httpd_netconn/KEIL/tmp/CMakeFiles/LwIP_httpd_netconn+LwIP_httpd_netconn"
+		},
+		{
+			"file" : "/Users/chrsei01/02_Git/KeilChris/M55M1BSP/SampleCode/NuMaker_M55M1/LwIP_httpd_netconn/KEIL/tmp/CMakeFiles/LwIP_httpd_netconn+LwIP_httpd_netconn.rule"
+		},
+		{
+			"file" : "/Users/chrsei01/02_Git/KeilChris/M55M1BSP/SampleCode/NuMaker_M55M1/LwIP_httpd_netconn/KEIL/tmp/CMakeFiles/LwIP_httpd_netconn+LwIP_httpd_netconn-complete.rule"
+		},
+		{
+			"file" : "/Users/chrsei01/02_Git/KeilChris/M55M1BSP/SampleCode/NuMaker_M55M1/LwIP_httpd_netconn/KEIL/tmp/LwIP_httpd_netconn+LwIP_httpd_netconn/src/LwIP_httpd_netconn+LwIP_httpd_netconn-stamp/LwIP_httpd_netconn+LwIP_httpd_netconn-build.rule"
+		},
+		{
+			"file" : "/Users/chrsei01/02_Git/KeilChris/M55M1BSP/SampleCode/NuMaker_M55M1/LwIP_httpd_netconn/KEIL/tmp/LwIP_httpd_netconn+LwIP_httpd_netconn/src/LwIP_httpd_netconn+LwIP_httpd_netconn-stamp/LwIP_httpd_netconn+LwIP_httpd_netconn-configure.rule"
+		},
+		{
+			"file" : "/Users/chrsei01/02_Git/KeilChris/M55M1BSP/SampleCode/NuMaker_M55M1/LwIP_httpd_netconn/KEIL/tmp/LwIP_httpd_netconn+LwIP_httpd_netconn/src/LwIP_httpd_netconn+LwIP_httpd_netconn-stamp/LwIP_httpd_netconn+LwIP_httpd_netconn-database.rule"
+		},
+		{
+			"file" : "/Users/chrsei01/02_Git/KeilChris/M55M1BSP/SampleCode/NuMaker_M55M1/LwIP_httpd_netconn/KEIL/tmp/LwIP_httpd_netconn+LwIP_httpd_netconn/src/LwIP_httpd_netconn+LwIP_httpd_netconn-stamp/LwIP_httpd_netconn+LwIP_httpd_netconn-download.rule"
+		},
+		{
+			"file" : "/Users/chrsei01/02_Git/KeilChris/M55M1BSP/SampleCode/NuMaker_M55M1/LwIP_httpd_netconn/KEIL/tmp/LwIP_httpd_netconn+LwIP_httpd_netconn/src/LwIP_httpd_netconn+LwIP_httpd_netconn-stamp/LwIP_httpd_netconn+LwIP_httpd_netconn-executes.rule"
+		},
+		{
+			"file" : "/Users/chrsei01/02_Git/KeilChris/M55M1BSP/SampleCode/NuMaker_M55M1/LwIP_httpd_netconn/KEIL/tmp/LwIP_httpd_netconn+LwIP_httpd_netconn/src/LwIP_httpd_netconn+LwIP_httpd_netconn-stamp/LwIP_httpd_netconn+LwIP_httpd_netconn-install.rule"
+		},
+		{
+			"file" : "/Users/chrsei01/02_Git/KeilChris/M55M1BSP/SampleCode/NuMaker_M55M1/LwIP_httpd_netconn/KEIL/tmp/LwIP_httpd_netconn+LwIP_httpd_netconn/src/LwIP_httpd_netconn+LwIP_httpd_netconn-stamp/LwIP_httpd_netconn+LwIP_httpd_netconn-mkdir.rule"
+		},
+		{
+			"file" : "/Users/chrsei01/02_Git/KeilChris/M55M1BSP/SampleCode/NuMaker_M55M1/LwIP_httpd_netconn/KEIL/tmp/LwIP_httpd_netconn+LwIP_httpd_netconn/src/LwIP_httpd_netconn+LwIP_httpd_netconn-stamp/LwIP_httpd_netconn+LwIP_httpd_netconn-patch.rule"
+		},
+		{
+			"file" : "/Users/chrsei01/02_Git/KeilChris/M55M1BSP/SampleCode/NuMaker_M55M1/LwIP_httpd_netconn/KEIL/tmp/LwIP_httpd_netconn+LwIP_httpd_netconn/src/LwIP_httpd_netconn+LwIP_httpd_netconn-stamp/LwIP_httpd_netconn+LwIP_httpd_netconn-test.rule"
+		},
+		{
+			"file" : "/Users/chrsei01/02_Git/KeilChris/M55M1BSP/SampleCode/NuMaker_M55M1/LwIP_httpd_netconn/KEIL/tmp/LwIP_httpd_netconn+LwIP_httpd_netconn/src/LwIP_httpd_netconn+LwIP_httpd_netconn-stamp/LwIP_httpd_netconn+LwIP_httpd_netconn-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"LwIP_httpd_netconn+LwIP_httpd_netconn"
+		],
+		"name" : "LwIP_httpd_netconn+LwIP_httpd_netconn"
+	}
+}

@@ -1,0 +1,68 @@
+cbuild-run:
+  generated-by: csolution version 2.9.0
+  solution: LwIP_httpd_netconn.csolution.yml
+  target-type: LwIP_httpd_netconn
+  target-set: <default>
+  compiler: AC6
+  device: Nuvoton::M55M1H2LJAE
+  device-pack: Nuvoton::NuMicro_DFP@1.3.25
+  output:
+    - file: out/LwIP_httpd_netconn/LwIP_httpd_netconn/LwIP_httpd_netconn.axf
+      info: generate by LwIP_httpd_netconn+LwIP_httpd_netconn
+      type: elf
+      load: symbols
+    - file: out/LwIP_httpd_netconn/LwIP_httpd_netconn/LwIP_httpd_netconn.hex
+      info: generate by LwIP_httpd_netconn+LwIP_httpd_netconn
+      type: hex
+      load: image
+  system-resources:
+    memory:
+      - name: IROM1
+        access: rx
+        start: 0x00100000
+        size: 0x00200000
+        from-pack: Nuvoton::NuMicro_DFP@1.3.25
+      - name: IROM2
+        access: rx
+        start: 0x10100000
+        size: 0x00200000
+        from-pack: Nuvoton::NuMicro_DFP@1.3.25
+      - name: IRAM1
+        access: rwx
+        start: 0x20100000
+        size: 0x00150000
+        from-pack: Nuvoton::NuMicro_DFP@1.3.25
+      - name: IRAM2
+        access: rwx
+        start: 0x30100000
+        size: 0x00150000
+        from-pack: Nuvoton::NuMicro_DFP@1.3.25
+  system-descriptions:
+    - file: ${CMSIS_PACK_ROOT}/Nuvoton/NuMicro_DFP/1.3.25/SVD/Nuvoton/M55M1.svd
+      type: svd
+  debugger:
+    name: CMSIS-DAP@pyOCD
+    protocol: swd
+    clock: 10000000
+    dbgconf: ../../../../../../../../..
+    gdbserver:
+      - port: 3333
+  programming:
+    - algorithm: ${CMSIS_PACK_ROOT}/Nuvoton/NuMicro_DFP/1.3.25/Flash/M55M1_AP_2M.FLM
+      start: 0x00100000
+      size: 0x00200000
+      ram-start: 0x20000000
+      ram-size: 0x00008000
+    - algorithm: ${CMSIS_PACK_ROOT}/Nuvoton/NuMicro_DFP/1.3.25/Flash/M55M1_NS.FLM
+      start: 0x10100000
+      size: 0x00200000
+      ram-start: 0x20000000
+      ram-size: 0x00008000
+  debug-topology:
+    debugports:
+      - dpid: 0
+        accessports:
+          - apid: 0
+            address: 0x00000000
+    processors:
+      - apid: 0

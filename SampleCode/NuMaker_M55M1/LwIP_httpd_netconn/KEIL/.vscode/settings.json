@@ -1,0 +1,6 @@
+{
+    "debug.hideSlowPreLaunchWarning": true,
+    "clangd.arguments": [
+        "--compile-commands-dir=/Users/chrsei01/02_Git/KeilChris/M55M1BSP/SampleCode/NuMaker_M55M1/LwIP_httpd_netconn/KEIL/out/LwIP_httpd_netconn/LwIP_httpd_netconn"
+    ]
+}
